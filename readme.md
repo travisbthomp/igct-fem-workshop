@@ -3,9 +3,15 @@
 <p align=center>A docker-enabled virtual environment for the MD Anderson Cancer Center IGCT FEM human brain mesh generation workshop tutorial and open lab. March 5, 2023</p>
 
 ## Setting up
-This section is a simple guide for those setting up the computing environment for the tutorial.  The first step is, of course, to [install docker](https://docs.docker.com/get-docker/) for your particular operating system.  Then you will need to clone this repository via:
+This section is a simple guide for those setting up the computing environment for the tutorial.  The first step is, of course, to [install docker](https://docs.docker.com/get-docker/) for your particular operating system.  Then you will need to clone [this repository](https://github.com/travisbthomp/igct-fem-workshop) via one of the commands below.
 
-> git clone ....
+using git with ssh
+
+> $ git clone git@github.com:travisbthomp/igct-fem-workshop.git\
+
+using git with https
+
+> $ git clone https://github.com/travisbthomp/igct-fem-workshop.git
 
 ### Building the included docker images
 

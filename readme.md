@@ -7,7 +7,7 @@ This section is a simple guide for those setting up the computing environment fo
 
 using git with ssh
 
-> $ git clone git@github.com:travisbthomp/igct-fem-workshop.git\
+> $ git clone git@github.com:travisbthomp/igct-fem-workshop.git
 
 using git with https
 

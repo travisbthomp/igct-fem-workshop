@@ -1,0 +1,1 @@
+docker run -ti -p 127.0.0.1:8001:8001 -v $(pwd)/freesurfer:/root/freesurfer-shared -v $(pwd)/mri-data/data:/root/data -w /root/freesurfer-shared freesurfer-mbm-demo  

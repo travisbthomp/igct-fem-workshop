@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# get the data from zenodo
+
+# version 1 of the data (ernie only)
+#wget https://zenodo.org/record/4386987/files/mri2fem-dataset.tar.gz
+
+# version 2 of the data (ernie and abby)
+wget https://zenodo.org/record/4899120/files/mri2fem-dataset.tar.gz
+
+echo ""
+echo " ---- Unpacking Files ---- "
+# unzip the data
+gunzip mri2fem-dataset.tar.gz
+
+# unpack the data
+tar -xvf mri2fem-dataset.tar
+
+echo ""
+echo " ---- Cleaning up ---- "
+
+# mv the local files
+mkdir data
+mkdir data/dicom-files
+mkdir data/freesurfer-files
+
+mv ./mri2fem-dataset/dicom/ernie ./data/dicom-files/ernie
+mv ./mri2fem-dataset/freesurfer/ernie ./data/freesurfer-files/ernie
+
+mv ./mri2fem-dataset/dicom/abby ./data/dicom-files/abby
+mv ./mri2fem-dataset/freesurfer/abby ./data/freesurfer-files/abby
+
+# cleanup
+rm mri2fem-dataset.tar
+rm -rf ./mri2fem-dataset
+
+echo ""
+echo " ---- Done ---- "

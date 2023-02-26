@@ -1,0 +1,4 @@
+#!/bin/bash
+
+docker run -ti -p 127.0.0.1:8002:8002 -v $(pwd)/svmtk:/home/svmtk/shared -w /home/svmtk svmtk-mbm-demo 
+

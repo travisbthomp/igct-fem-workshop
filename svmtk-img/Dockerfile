@@ -12,7 +12,8 @@ RUN apt-get update && apt-get install -y \
     xz-utils \
     zlib1g-dev \
     git \
-    python3-pip
+    python3-pip \
+    vim
 
 RUN git clone --recursive https://github.com/SVMTK/SVMTK
 

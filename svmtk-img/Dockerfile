@@ -15,13 +15,23 @@ RUN apt-get update && apt-get install -y \
     python3-pip \
     vim
 
+
 RUN git clone --recursive https://github.com/SVMTK/SVMTK
 
 WORKDIR /SVMTK
 
 RUN python3 -m pip install .
 
+# ----- Other dependencies (for the book code environemnt) ------
+RUN pip3 install numpy
+RUN pip3 install nibabel
+
+# libhdf5 and libnetcdf are needed by meshio
+RUN apt-get install -y libhdf5-serial-dev
+RUN apt-get install -y libnetcdf-dev
+RUN pip3 install meshio[all]
+
+
 WORKDIR /home
 
 RUN mkdir svmtk
-RUN mkdir svmtk/shared

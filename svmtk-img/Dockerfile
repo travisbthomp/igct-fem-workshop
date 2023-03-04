@@ -35,3 +35,6 @@ RUN pip3 install meshio[all]
 WORKDIR /home
 
 RUN mkdir svmtk
+
+COPY SVMTk-tet-mesh-to-FEniCS-XDMF.py . 
+COPY SVMTk-tri-mesh-to-FEniCS-XDMF.py .

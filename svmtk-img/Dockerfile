@@ -38,3 +38,4 @@ RUN mkdir svmtk
 
 COPY SVMTk-tet-mesh-to-FEniCS-XDMF.py . 
 COPY SVMTk-tri-mesh-to-FEniCS-XDMF.py .
+COPY write-mesh-to-xdmf.py .
